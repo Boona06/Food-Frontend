@@ -1,4 +1,5 @@
-import Category from "./admin/_components/category";
+import Category from "./admin/_components/Category";
+
 
 
 export default function Home (){
