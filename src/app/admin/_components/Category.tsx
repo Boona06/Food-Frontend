@@ -19,7 +19,7 @@ export default function Category() {
       setFoodcategory(data);
     };
     fetchData();
-  }, [foodcategory]);
+  }, []);
 
   return (
     <div className="mt-20">

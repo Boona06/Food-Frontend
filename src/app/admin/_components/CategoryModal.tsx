@@ -23,7 +23,7 @@ export default function SaveCategory({ onClose }: Props) {
     toast.success("New Category is being added to the menu");
   };
   return (
-    <div className="bg-[#00000066] fixed top-0 left-0 right-0 bottom-0 flex justify-center items-center ">
+    <div className="bg-[#00000033] fixed top-0 left-0 right-0 bottom-0 flex justify-center items-center ">
       <div className=" bg-white rounded-lg lg:w-[460px] lg:h-[272px]">
         <div className="flex justify-between p-8">
           <h2>Add new category</h2>

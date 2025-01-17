@@ -1,11 +1,16 @@
+import { useState } from "react";
 import Category from "./admin/_components/Category";
-import SaveFood from "./admin/_components/FoodModal";
+import Food from "./admin/_components/Food";
+import Navigation from "./admin/_components/Navigation";
 
 export default function Home() {
   return (
-    <>
-      <Category />
-      <SaveFood />
-    </>
+    <div className="flex gap-6">
+      <Navigation />
+      <div>
+        <Category />
+        <Food />
+      </div>
+    </div>
   );
 }

@@ -1,4 +1,3 @@
-import { Input } from "@/components/ui/input";
 import { useState } from "react";
 import { MdCancel } from "react-icons/md";
 import { toast } from "sonner";
@@ -8,27 +7,28 @@ type Props = {
   onClose: (newValue: boolean) => void;
 };
 
-export default function SaveFood() {
-  // //   const [newCategory, setNewCategory] = useState("");
-  // //   const saveButton = async () => {
-  // //     const response = await fetch("http://localhost:5000/food/", {
-  // //       method: "POST",
-  // //       headers: {
-  // //         "Content-Type": "application/json",
-  // //       },
-  // //       body: JSON.stringify({ categoryName: newCategory }),
-  // //     });
-  // //     const data = await response.json();
+export default function SaveFood({ onClose }: Props) {
+  const saveButton = async () => {
+    const response = await fetch("http://localhost:5000/food/", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        foodName: "foodname",
+        price: 1234,
+        image: "src",
+        ingredients: "Ashig tus bha",
+      }),
+    });
+  };
 
-  //     // onClose(false);
-  //   toast.success("New dish is being added to the menu");
-  //   };
   return (
-    <div className="fixed bg-[#00000066] left-0 right-0 top-0 bottom-0 flex justify-center items-center ">
+    <div className="fixed bg-[#00000033] left-0 right-0 top-0 bottom-0 flex justify-center items-center ">
       <div className="bg-[#ffffff] lg:w-460px lg:h-592px rounded-lg">
         <div className="flex justify-between p-8">
           <h1 className="font-bold">Add new Dish to Appetizers</h1>
-          <button>
+          <button onClick={() => onClose(false)}>
             <MdCancel className="size-8" />
           </button>
         </div>
