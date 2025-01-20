@@ -1,16 +1,12 @@
-import { useState } from "react";
-import Category from "./admin/_components/Category";
-import Food from "./admin/_components/Food";
-import Navigation from "./admin/_components/Navigation";
+import Footer from "./_web/_components/footer";
+import Navigation from "./_web/_components/navigation";
 
 export default function Home() {
   return (
-    <div className="flex gap-6">
+    <div>
       <Navigation />
-      <div>
-        <Category />
-        <Food />
-      </div>
+      <img className="w-full" src="Image.png" />
+      <Footer />
     </div>
   );
 }
