@@ -2,6 +2,7 @@
 import { Badge } from "@/components/ui/badge";
 import { useState, useEffect } from "react";
 import SaveCategory from "./CategoryModal";
+import Link from "next/link";
 
 type Category = {
   _id: number;
@@ -22,22 +23,22 @@ export default function Category() {
   }, []);
 
   return (
-    <div className="mt-20">
-      <div className="bg-white rounded-lg lg:w-[1170px] font-bold mr-auto ml-auto ">
-        <h1 className="p-4">Dishes Category</h1>
-        {foodcategory.map((item) => (
+    <div className="bg-white rounded-lg lg:w-[1170px] font-bold mr-auto ml-auto ">
+      <h1 className="p-4">Dishes Category</h1>
+      {foodcategory.map((item) => (
+        <Link key={item?._id} href={`/admin/${item?._id}`}>
           <Badge className="bg-white text-black border-solid border-[1px] border-[#E4E4E7] rounded-xl my-4 mx-2">
-            <div key={item?._id}>{item?.categoryName}</div>
+            <div>{item?.categoryName}</div>
           </Badge>
-        ))}
-        <button
-          onClick={() => setCategoryModal(true)}
-          className="rounded-full bg-[#EF4444] text-white h-9 w-9"
-        >
-          +
-        </button>
-        {categoryModal && <SaveCategory onClose={setCategoryModal} />}
-      </div>
+        </Link>
+      ))}
+      <button
+        onClick={() => setCategoryModal(true)}
+        className="rounded-full bg-[#EF4444] text-white h-9 w-9"
+      >
+        +
+      </button>
+      {categoryModal && <SaveCategory onClose={setCategoryModal} />}
     </div>
   );
 }

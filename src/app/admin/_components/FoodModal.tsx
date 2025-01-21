@@ -68,7 +68,10 @@ export default function SaveFood({ onClose }: Props) {
               </div>
             </label>
           </div>
-          <button className="bg-black text-white p-3 mt-8 m-5 font-normal rounded-lg text-sm">
+          <button
+            onClick={saveButton}
+            className="bg-black text-white p-3 mt-8 m-5 font-normal rounded-lg text-sm"
+          >
             Add Dish
           </button>
         </div>
