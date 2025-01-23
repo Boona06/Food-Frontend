@@ -16,7 +16,19 @@ export default function RootLayout({
   return (
     <ClerkProvider>
       <SignedOut>
-        <SignInButton />
+        <div className="flex justify-center items-center gap-16 p-5 ">
+          <div className="text-center">
+            <div className="text-center bg-[#18181B] opacity-20 rounded-md text-white lg:w-[426px] lg:h-9 flex justify-center">
+              <button> Let's go </button>
+            </div>
+            Don’t have an account?
+            <span className="text-blue-700 pl-3">
+              <SignInButton />
+            </span>
+          </div>
+
+          <img src="login.png" className="h-screen w-full rounded-2xl " />
+        </div>
       </SignedOut>
 
       <SignedIn>
