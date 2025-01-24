@@ -25,6 +25,7 @@ export default function Category() {
   return (
     <div className="bg-white rounded-lg lg:w-[1170px] font-bold mr-auto ml-auto ">
       <h1 className="p-4">Dishes Category</h1>
+      <Badge>All category</Badge>
       {foodcategory.map((item) => (
         <Link key={item?._id} href={`/admin/${item?._id}`}>
           <Badge className="bg-white text-black border-solid border-[1px] border-[#E4E4E7] rounded-xl my-4 mx-2">

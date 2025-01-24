@@ -1,4 +1,6 @@
-import Link from "next/link";
+import { LuShoppingCart } from "react-icons/lu";
+import { CiUser } from "react-icons/ci";
+import { CiLocationOn } from "react-icons/ci";
 
 export default function Navigation() {
   return (
@@ -13,12 +15,22 @@ export default function Navigation() {
         </div>
       </div>
 
-      <div>
+      <div className=" flex gap-5 p-2">
+        <span className="text-[#EF4444] text-2xl">
+          <CiLocationOn />
+        </span>
+
         <input
-          className="bg-white rounded-lg "
+          className="bg-white h-9 w-64 rounded-2xl text-center "
           type="text"
           placeholder="Add location"
         />
+        <button className="h-9 w-9 flex justify-center items-center bg-white rounded-full">
+          <LuShoppingCart />
+        </button>
+        <button className="h-9 w-9 flex justify-center items-center bg-[#EF4444] rounded-full">
+          <CiUser />
+        </button>
       </div>
     </div>
   );
