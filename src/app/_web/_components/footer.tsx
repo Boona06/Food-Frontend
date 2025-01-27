@@ -62,7 +62,7 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <div className=" border-t-2 lg:w-[1264px] ml-auto mr-auto border-[#F4F4F566]">
+      <div className=" border-t-2 lg:w-[1264px] ml-auto mr-auto border-[#F4F4F566] flex justify-around pt-6 ">
         <span className="text-[#71717A] ">Copy rigth 2024 © Nomnom LLC</span>
         <a className="text-[#71717A] " href="">
           Privacy policy

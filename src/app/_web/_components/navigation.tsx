@@ -1,6 +1,7 @@
 import { LuShoppingCart } from "react-icons/lu";
 import { CiUser } from "react-icons/ci";
 import { CiLocationOn } from "react-icons/ci";
+import Link from "next/link";
 
 export default function Navigation() {
   return (
@@ -28,9 +29,11 @@ export default function Navigation() {
         <button className="h-9 w-9 flex justify-center items-center bg-white rounded-full">
           <LuShoppingCart />
         </button>
-        <button className="h-9 w-9 flex justify-center items-center bg-[#EF4444] rounded-full">
-          <CiUser />
-        </button>
+        <Link href={"/admin"}>
+          <button className="h-9 w-9 flex justify-center items-center bg-[#EF4444] rounded-full">
+            <CiUser />
+          </button>
+        </Link>
       </div>
     </div>
   );
